@@ -418,3 +418,41 @@
         width: 100%;
     }
 }
+
+/* Confidential Project Styles */
+.project-image.confidential-blur img {
+    filter: blur(12px) grayscale(0.8);
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.project-card:hover .project-image.confidential-blur img {
+    filter: blur(8px) grayscale(0.6);
+    transform: scale(1.15);
+    /* Behave slightly differently */
+}
+
+.featured-badge.confidential-badge {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    animation: none;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.project-link.restricted {
+    background: rgba(20, 20, 30, 0.8);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #fca5a5;
+    cursor: default;
+}
+
+.project-link.restricted svg {
+    color: #ef4444;
+}
+
+.project-link.restricted:hover {
+    background: rgba(30, 30, 40, 0.9);
+    border-color: #ef4444;
+    transform: translateY(0) scale(1) !important;
+    /* Override standard hover */
+    box-shadow: none;
+}

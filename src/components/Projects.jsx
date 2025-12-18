@@ -45,19 +45,20 @@ const Projects = () => {
         {
             id: 3,
             title: 'Coupon Mart',
-            subtitle: 'SaaS Platform for AI-Generated Coupons',
-            description: 'A scalable SaaS platform enabling businesses to generate customized promotional coupons using Generative AI. Built a high-performance parallel rendering engine with Playwright and Python threading, reducing batch generation time by 90%.',
+            subtitle: 'XXXXXXXXXXX XXXXXXXXXX XXXXX',
+            description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
             image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-            technologies: ['Python', 'Generative AI', 'Playwright', 'Threading', 'SaaS'],
+            technologies: ['Python', 'Generative AI', 'Playwright', 'SaaS'],
             category: 'fullstack',
             featured: true,
-            github: 'https://github.com/Abhishek-Madhusoodhanan',
+            confidential: true,
+            github: '#',
             highlights: [
-                'AI-powered coupon design generation',
-                '90% faster batch processing with threading',
-                'Playwright for high-quality rendering',
-                'QR code generation for each coupon',
-                'Scalable SaaS architecture'
+                'XXXXXXXXXXXXXXXXXXXXX',
+                'XXXXXXXXXXXXXXX',
+                'XXXXXXXXXXXX',
+                'XXXXXXXXXXXXXXXXXXXX',
+                'XXXXXXXXXXXXXX'
             ]
         },
         {
@@ -164,19 +165,32 @@ const Projects = () => {
                             onClick={() => openModal(project)}
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <div className="project-image">
+                            <div className={`project-image ${project.confidential ? 'confidential-blur' : ''}`}>
                                 <img src={project.image} alt={project.title} loading="lazy" />
                                 <div className="project-overlay">
-                                    <button className="project-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <circle cx="11" cy="11" r="8" />
-                                            <path d="m21 21-4.35-4.35" />
-                                        </svg>
-                                        View Details
-                                    </button>
+                                    {project.confidential ? (
+                                        <button className="project-link restricted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                            </svg>
+                                            Production Identity
+                                        </button>
+                                    ) : (
+                                        <button className="project-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <circle cx="11" cy="11" r="8" />
+                                                <path d="m21 21-4.35-4.35" />
+                                            </svg>
+                                            View Details
+                                        </button>
+                                    )}
                                 </div>
-                                {project.featured && (
+                                {project.featured && !project.confidential && (
                                     <span className="featured-badge">⭐ Featured</span>
+                                )}
+                                {project.confidential && (
+                                    <span className="featured-badge confidential-badge">🔒 Confidential</span>
                                 )}
                             </div>
                             <div className="project-content">
@@ -243,17 +257,27 @@ const Projects = () => {
                             </div>
 
                             <div className="modal-actions">
-                                <a
-                                    href={selectedProject.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-primary"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg>
-                                    View on GitHub
-                                </a>
+                                {selectedProject.confidential ? (
+                                    <button className="btn btn-primary" disabled style={{ opacity: 0.7, cursor: 'not-allowed' }}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                        Source Private
+                                    </button>
+                                ) : (
+                                    <a
+                                        href={selectedProject.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn btn-primary"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                        View on GitHub
+                                    </a>
+                                )}
                                 <button className="btn btn-secondary" onClick={closeModal}>
                                     Close
                                 </button>
