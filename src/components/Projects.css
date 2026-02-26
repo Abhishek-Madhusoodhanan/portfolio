@@ -421,13 +421,13 @@
 
 /* Confidential Project Styles */
 .project-image.confidential-blur img {
-    filter: blur(12px) grayscale(0.8);
+    /* filter: blur(12px) grayscale(0.8); */
     transform: scale(1.1);
     transition: all 0.5s ease;
 }
 
 .project-card:hover .project-image.confidential-blur img {
-    filter: blur(8px) grayscale(0.6);
+    /* filter: blur(8px) grayscale(0.6); */
     transform: scale(1.15);
     /* Behave slightly differently */
 }

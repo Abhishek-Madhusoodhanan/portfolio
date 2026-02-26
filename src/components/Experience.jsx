@@ -4,7 +4,7 @@ const Experience = () => {
     const experiences = [
         {
             id: 1,
-            role: 'Software Developer Engineer (SDE)',
+            role: 'AI Engineer',
             company: 'Gaude Business and Infrastructure Solutions',
             location: 'Technopark, Trivandrum',
             period: 'Sep 2025 - Present',

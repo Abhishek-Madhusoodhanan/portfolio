@@ -29,13 +29,13 @@ const About = () => {
 
                     <div className="about-text">
                         <h3 className="about-subtitle">
-                            Full Stack Python Developer & Software Developer Engineer
+                            Full Stack Python Developer & AI Engineer
                         </h3>
 
                         <p className="about-description">
                             I'm a passionate Full Stack Python Developer skilled in designing, developing,
                             and deploying web applications using <strong>Django, HTML, CSS, JavaScript, and Bootstrap</strong>.
-                            Currently working as an SDE at Gaude Business and Infrastructure Solutions, Technopark.
+                            Currently working as an AI Engineer at Gaude Business and Infrastructure Solutions, Technopark.
                         </p>
 
                         <p className="about-description">

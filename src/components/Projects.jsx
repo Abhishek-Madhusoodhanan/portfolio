@@ -33,7 +33,8 @@ const Projects = () => {
             technologies: ['Python', 'Gemini API', 'RAG', 'Ollama', 'PDF Generation'],
             category: 'ai',
             featured: true,
-            github: 'https://github.com/Abhishek-Madhusoodhanan',
+            confidential: true,
+            github: '#',
             highlights: [
                 'RAG-based intelligent document analysis',
                 'Multi-format input support (PDF, images, text)',
@@ -45,24 +46,43 @@ const Projects = () => {
         {
             id: 3,
             title: 'Coupon Mart',
-            subtitle: 'XXXXXXXXXXX XXXXXXXXXX XXXXX',
-            description: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+            subtitle: 'AI-Powered Coupon Discovery Platform',
+            description: 'An intelligent coupon aggregation platform that uses AI to find and recommend the best deals across multiple e-commerce sites. Features automated coupon discovery, price tracking, and personalized deal alerts.',
             image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
             technologies: ['Python', 'Generative AI', 'Playwright', 'SaaS'],
-            category: 'fullstack',
+            category: 'ai',
             featured: true,
             confidential: true,
             github: '#',
             highlights: [
-                'XXXXXXXXXXXXXXXXXXXXX',
-                'XXXXXXXXXXXXXXX',
-                'XXXXXXXXXXXX',
-                'XXXXXXXXXXXXXXXXXXXX',
-                'XXXXXXXXXXXXXX'
+                'AI-powered coupon discovery engine',
+                'Real-time price tracking across platforms',
+                'Automated deal matching and recommendations',
+                'Multi-site integration with web scraping',
+                'Personalized notification system'
             ]
         },
         {
             id: 4,
+            title: 'Job Lens',
+            subtitle: 'Smart Job Discovery Platform for India',
+            description: 'An intelligent job search platform that helps users find nearby jobs in India based on their preferences and skills. Features location-based job discovery, personalized recommendations, and advanced filtering options.',
+            image: '/job-lens.jpg',
+            technologies: ['React', 'Node.js', 'MongoDB', 'Geolocation API', 'Job APIs'],
+            category: 'ai',
+            featured: true,
+            confidential: true,
+            github: '#',
+            highlights: [
+                'Location-based job discovery in India',
+                'Personalized job recommendations',
+                'Advanced filtering by skills and preferences',
+                'Real-time job alerts and notifications',
+                'User-friendly interface with map integration'
+            ]
+        },
+        {
+            id: 5,
             title: 'Book Recommendation System',
             subtitle: 'Student Resource Platform',
             description: 'A web platform using Django and JavaScript to suggest books and KTU notes for students. Designed a dynamic, user-friendly interface for quick and organized content access.',
@@ -80,13 +100,13 @@ const Projects = () => {
             ]
         },
         {
-            id: 5,
+            id: 6,
             title: 'LCERS',
             subtitle: 'Live Civilians Emergency Response System',
             description: 'A real-time disaster management platform using Python and Flask. Integrated Visual Crossing, Mapbox, and Elevation APIs for live alerts and location-based services to improve civilian safety during emergencies.',
             image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop',
             technologies: ['Python', 'Flask', 'Mapbox API', 'Real-time', 'APIs'],
-            category: 'fullstack',
+            category: 'ai',
             featured: true,
             github: 'https://github.com/Abhishek-Madhusoodhanan',
             highlights: [
@@ -98,7 +118,7 @@ const Projects = () => {
             ]
         },
         {
-            id: 6,
+            id: 7,
             title: 'Agileinfo Website Replica',
             subtitle: 'Pixel-Perfect Company Website',
             description: 'Recreated company website using HTML, CSS, and JavaScript with pixel-perfect accuracy. Implemented fully responsive design for seamless experience across devices with optimized UI/UX.',
@@ -114,7 +134,7 @@ const Projects = () => {
                 'Cross-browser compatibility',
                 'Modern UI/UX practices'
             ]
-        },
+        }
     ];
 
     const filters = [

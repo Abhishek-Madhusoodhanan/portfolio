@@ -7,7 +7,7 @@ const Hero = () => {
     const [isDeleting, setIsDeleting] = useState(false);
 
     const roles = [
-        'Software Developer Engineer',
+        'AI Engineer',
         'Full Stack Developer',
         'Python Developer',
         'React Developer'
@@ -131,7 +131,7 @@ const Hero = () => {
                     </div>
                     <div className="floating-badge badge-1">
                         <span className="badge-icon">⚡</span>
-                        <span>SDE</span>
+                        <span>AI Engineer</span>
                     </div>
                     <div className="floating-badge badge-2">
                         <span className="badge-icon">🚀</span>
