@@ -1,6 +1,13 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+    const sectionRef = useRef(null);
+
     const stats = [
         { value: '1+', label: 'Years Experience' },
         { value: '5+', label: 'Projects Completed' },
@@ -8,11 +15,108 @@ const About = () => {
         { value: '100%', label: 'Dedication' },
     ];
 
+    useEffect(() => {
+        const section = sectionRef.current;
+        if (!section) return;
+
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#about',
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: false,
+                    once: true,
+                },
+            });
+
+            // 1. Section clip-path reveal
+            tl.fromTo(
+                section,
+                { clipPath: 'inset(100% 0 0 0)' },
+                { clipPath: 'inset(0% 0 0 0)', duration: 0.8, ease: 'power3.out' }
+            );
+
+            // 2. "About" from left, "Me" from right
+            tl.fromTo(
+                '.about-title-word-left',
+                { x: -120, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
+                '-=0.3'
+            );
+            tl.fromTo(
+                '.about-title-word-right',
+                { x: 120, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
+                '<'
+            );
+
+            // 3. Profile photo slides in from left with rotation
+            tl.fromTo(
+                '.about-image',
+                { x: -100, opacity: 0, rotateY: 15 },
+                { x: 0, opacity: 1, rotateY: 0, duration: 0.7, ease: 'power3.out' },
+                '-=0.3'
+            );
+
+            // 4. Experience badge pops in with elastic bounce
+            tl.fromTo(
+                '.experience-badge',
+                { scale: 0, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.6, ease: 'elastic.out(1, 0.5)' },
+                '-=0.2'
+            );
+
+            // 5. Subtitle
+            tl.fromTo(
+                '.about-subtitle',
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+                '-=0.3'
+            );
+
+            // 6. Bio paragraphs — stagger fade up
+            tl.fromTo(
+                '.about-description',
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, stagger: 0.15, ease: 'power3.out' },
+                '-=0.2'
+            );
+
+            // 7. Info grid cards — stagger from bottom
+            tl.fromTo(
+                '.info-card',
+                { y: 35, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.4, stagger: 0.1, ease: 'power3.out' },
+                '-=0.2'
+            );
+
+            // 8. Buttons slide up together
+            tl.fromTo(
+                '.about-buttons',
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+                '-=0.1'
+            );
+
+            // 9. Stats cards
+            tl.fromTo(
+                '.stat-card',
+                { y: 40, opacity: 0, scale: 0.9 },
+                { y: 0, opacity: 1, scale: 1, duration: 0.4, stagger: 0.1, ease: 'power3.out' },
+                '-=0.2'
+            );
+        }, section);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section id="about" className="about">
+        <section id="about" className="about" ref={sectionRef}>
             <div className="container">
                 <h2 className="section-title">
-                    About <span>Me</span>
+                    <span className="about-title-word-left">About</span>{' '}
+                    <span className="about-title-word-right">Me</span>
                 </h2>
 
                 <div className="about-content">
@@ -29,48 +133,108 @@ const About = () => {
 
                     <div className="about-text">
                         <h3 className="about-subtitle">
-                            Full Stack Python Developer & AI Engineer
+                            Full Stack Python Developer &amp; AI Engineer
                         </h3>
 
                         <p className="about-description">
-                            I'm a passionate Full Stack Python Developer skilled in designing, developing,
-                            and deploying web applications using <strong>Django, HTML, CSS, JavaScript, and Bootstrap</strong>.
-                            Currently working as an AI Engineer at Gaude Business and Infrastructure Solutions, Technopark.
+                            I'm a passionate Software Engineer skilled in full-stack development and AI/ML systems. My expertise spans across <strong>Python, Django, React, C#, and .NET</strong>, with hands-on experience in building scalable applications and integrating modern CI/CD workflows. Currently working as an AI/ML Engineer at Gaude Business and Infrastructure Solutions, Technopark.
                         </p>
 
                         <p className="about-description">
                             I specialize in building intelligent web applications by integrating AI models into production environments.
-                            My expertise includes <strong>RAG (Retrieval-Augmented Generation), LLMs, LangChain, React, and Django</strong>.
-                            I'm eager to contribute, collaborate, and innovate within forward-thinking development teams.
+                            My expertise includes <strong>RAG (Retrieval-Augmented Generation), LLMs, and LangChain</strong>.
+                            I have a strong understanding of the software development lifecycle and am dedicated to building efficient, user-focused applications.
                         </p>
 
                         <div className="about-info">
-                            <div className="info-item">
-                                <span className="info-icon">📧</span>
-                                <div>
-                                    <span className="info-label">Email</span>
-                                    <span className="info-value">abhishekmadhusoodhanan18@gmail.com</span>
+                            {/* Email */}
+                            <div className="info-card" data-color="cyan">
+                                <div className="info-card-glow"></div>
+                                <div className="info-card-border"></div>
+                                <div className="info-card-inner">
+                                    <div className="info-icon-orb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                                            <path d="M22 4l-10 8L2 4" />
+                                        </svg>
+                                        <div className="orb-ring"></div>
+                                        <div className="orb-particles">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div className="info-text">
+                                        <span className="info-label">Email</span>
+                                        <span className="info-value">abhishekmadhusoodhanan18@gmail.com</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="info-item">
-                                <span className="info-icon">📍</span>
-                                <div>
-                                    <span className="info-label">Location</span>
-                                    <span className="info-value">Thiruvananthapuram, Kerala</span>
+
+                            {/* Location */}
+                            <div className="info-card" data-color="purple">
+                                <div className="info-card-glow"></div>
+                                <div className="info-card-border"></div>
+                                <div className="info-card-inner">
+                                    <div className="info-icon-orb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                        <div className="orb-ring"></div>
+                                        <div className="orb-particles">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div className="info-text">
+                                        <span className="info-label">Location</span>
+                                        <span className="info-value">Thiruvananthapuram, Kerala</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="info-item">
-                                <span className="info-icon">🎓</span>
-                                <div>
-                                    <span className="info-label">Education</span>
-                                    <span className="info-value">B.Tech in Computer Science</span>
+
+                            {/* Education */}
+                            <div className="info-card" data-color="amber">
+                                <div className="info-card-glow"></div>
+                                <div className="info-card-border"></div>
+                                <div className="info-card-inner">
+                                    <div className="info-icon-orb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                            <path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5" />
+                                        </svg>
+                                        <div className="orb-ring"></div>
+                                        <div className="orb-particles">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div className="info-text">
+                                        <span className="info-label">Education</span>
+                                        <span className="info-value">B.Tech in Computer Science</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="info-item">
-                                <span className="info-icon">💼</span>
-                                <div>
-                                    <span className="info-label">Status</span>
-                                    <span className="info-value available">Available for Opportunities</span>
+
+                            {/* Status */}
+                            <div className="info-card" data-color="emerald">
+                                <div className="info-card-glow"></div>
+                                <div className="info-card-border"></div>
+                                <div className="info-card-inner">
+                                    <div className="info-icon-orb">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                                        </svg>
+                                        <div className="orb-ring"></div>
+                                        <div className="orb-pulse"></div>
+                                        <div className="orb-particles">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div className="info-text">
+                                        <span className="info-label">Status</span>
+                                        <span className="info-value available">Available for Opportunities</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

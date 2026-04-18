@@ -21,7 +21,7 @@ const Experience = () => {
             role: 'Full Stack Python Developer - Intern',
             company: 'Agileinfo Techytern Private Limited',
             location: 'Trivandrum',
-            period: 'Aug 2024 - Sep 2025',
+            period: 'Aug 2024 - Aug 2025',
             current: false,
             description: [
                 'Engineered scalable full-stack web solutions using Python and Django, integrating RESTful APIs with dynamic front-end interfaces built in HTML5, CSS3, and JavaScript.',

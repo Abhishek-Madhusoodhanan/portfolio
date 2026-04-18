@@ -8,6 +8,7 @@ const Skills = () => {
             skills: [
                 { name: 'Python', level: 90 },
                 { name: 'JavaScript (ES6+)', level: 85 },
+                { name: 'C#', level: 80 },
                 { name: 'HTML5/CSS3', level: 90 },
                 { name: 'C++', level: 70 },
                 { name: 'Java', level: 65 },
@@ -18,6 +19,7 @@ const Skills = () => {
             icon: '🚀',
             skills: [
                 { name: 'Django', level: 90 },
+                { name: 'ASP.NET', level: 80 },
                 { name: 'React', level: 80 },
                 { name: 'Bootstrap', level: 85 },
                 { name: 'Flask', level: 75 },
@@ -41,6 +43,8 @@ const Skills = () => {
             skills: [
                 { name: 'Git/GitHub', level: 85 },
                 { name: 'REST APIs', level: 90 },
+                { name: 'MySQL', level: 85 },
+                { name: 'PostgreSQL', level: 80 },
                 { name: 'Playwright', level: 75 },
                 { name: 'VS Code', level: 90 },
                 { name: 'MS Office', level: 85 },
@@ -51,6 +55,10 @@ const Skills = () => {
     const techStack = [
         { name: 'Python', icon: '🐍' },
         { name: 'Django', icon: '🎯' },
+        { name: 'C#', icon: '🔷' },
+        { name: 'ASP.NET', icon: '🌐' },
+        { name: 'MySQL', icon: '🐬' },
+        { name: 'PostgreSQL', icon: '🐘' },
         { name: 'React', icon: '⚛️' },
         { name: 'JavaScript', icon: '🟨' },
         { name: 'LangChain', icon: '🔗' },

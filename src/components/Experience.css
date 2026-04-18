@@ -242,3 +242,10 @@
         margin-bottom: 15px;
     }
 }
+
+.current-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+}

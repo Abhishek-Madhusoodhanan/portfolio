@@ -1,0 +1,80 @@
+ABHISHEK MADHUSOODHANAN 
+SUMMARY
+Software Engineer with experience in full-stack development and AI/ML systems. Skilled in
+Python, Django, React, C#, and .NET, with hands-on experience in building scalable applications
+and integrating modern development  workflows including CI/CD. Proficient in developing AI-
+powered solutions using RAG, LLMs, and LangChain, along with deploying production-ready
+systems. Strong understanding of software development lifecycle and building efficient, user-
+focused applications.
+Set 2025 -PresentWORK EXPERIENCE
+Engineered and deployed AI-powered web applications using RAG and LLM integration
+Built scalable backend systems using Django and in tegrated modern front-end frameworks
+Implemented CI/CD pipelines to streamline deployment and reduce manual overhead
+Integrated AI models into production workflows, improving system intelligence and
+automationGaude Business and Infrastructure Solutions, Technopark
+AI/ML EngineerTECHNICAL SKILLS
+Programming Languag es: P ython, C#, C+ +, Ja vaScrip t, HTML5, CSS3
+Frame works & Libr aries: Djang o, React, Flask, Boots trap
+AI / ML & Gener ative AI: RAG, LLMs, Gener ative AI, Promp t Engineering , LangChain, Hugging
+Face, F AISS, V ertex AI
+Databases: MySQL , PostgreSQL , Chr omaDB
+Tools & Pla tforms: Git, GitHub, GitHub Actions, V S Code, Pla ywrigh t
+Developmen t Practices: RE ST API De velopmen t, CI/CD , Agile, Scrum
+9037169541 | abhishekmadhusoodhanan18@gmail.com
+ Srinidhi, Moozhikode, Pothencode, 695584, Thiruvananthapuram
+ GitHub- https://github.com/Abhishek-Madhusoodhanan
+linkedin.com/in/abhishek-madhusoodhanan-228600349SOFTWARE DEVELOPER ENGINEER
+Aug 2024 - Aug 2025Agileinfo Techytern Private Limited, Trivandrum
+Full Stack Python Developer Intern
+Engineer ed sc alable w eb applic ations using P ython and Djang o with RE ST API in tegration
+Developed dynamic fr ont-end in terfaces using Ja vaScrip t and CSS3
+Tech St ack: R eact, P ython,   Djang o, Playwrigh t, Vertex AI (Gemini)
+Built a Gener ative AI-po wered SaaS pla tform f or coupon cr eation and manag emen t
+Developed r ole-based w orkflo ws for Super Admin,  Shop Owner s, and Cus tomer s
+Implemen ted AI-driv en coupon g ener ation, editing , and c ategory-based disc overy featuresTech Stack: Python, Django, LangChain, Vector DB, LLMs, HTML, CSS, JavaScript
+Built an AI-powered analysis system for evaluating critical situations  using multi-modal inputs
+such as text, voice, and documents
+Developed dynamic questioning logic to identify missing information and improve analysis
+accuracy
+Implemented RAG pipelines using LangChain and vector databases for contextual understandingInsightGen  – AI-Powered Situation Analysis & Report GeneratorPROJECTS
+Coupon Mart
+Tech St ack: R eact, Djang o, JSear ch API (SerpAPI), RapidAPI
+Built an AI-po wered job pla tform f or resume-based and pr ofile-based job r ecommenda tions
+Implemen ted in telligent ma tching and loc ation-based job disc overy features
+Developed c ompan y, admin, and job manag emen t modules f or streamlined r ecruitmen t
+workflo wsJob Lens – Your AI Partner for Jobs and GrowthIdentified and resolved p roduction bottlenecks
+Improved system performance and stability
+Collaborated in Agile teams to deliver production-ready features efficiently
+OpsPilot – Internal Workflow & Approval Management System
+Tech Stack: C#, ASP.NET Core Web API, React, PostgreSQL, Entity Framework Core, SignalR
+Built an internal workflow platform for leave, reimbursement, and IT support requests
+Implemented real-time notifications and status tracking using SignalR
+Developed RESTful APIs with PostgreSQL and Entity Framework Core for process management
+ Book R ecommenda tion S ystem
+Tech St ack: Djang o, JavaScrip t, HTML , CSS
+Built a w eb pla tform f or recommending book s and KTU not es for studen ts
+Enabled eas y access t o study ma terials and r eference r esour ces
+Designed a user -friendly in terface f or or ganized content browsing
+English (Fluen t)
+Mala yalam (Na tive)
+Hindi (In termedia te)
+Tamil (Basic)LANGUAGES
+Showcased m y project L CERS at Shas tra, the flagship t echnic al festival of MA CE, eng aging
+with peer s and f aculty .
+Collabor ated on the de velopmen t of St oryGen, g aining "hands-on" e xpertise in pr oduct
+architectur e and f eature implemen tation.ACHIEVEMENTSEDUCATION
+B.Tech in Computer Science and Engineering
+ Muslim Association College of Engineering, Venjaramoodu, Trivandrum
+CGPA: 7.17 | Year of Passing: 2025
+ St. Mar y’s Higher Sec ondar y School, P attom,
+Trivandrum
+Percentage: 79% | Y ear of P assing: 2021Higher Sec ondar y Education (Bio-Ma ths)Tech St ack: P ython, Flask, Mapbo x, Visual Cr ossing API, Ele vation API
+Developed a real-time disas ter manag emen t platform for emer gency response
+coordina tion
+Integrated loc ation and w eather APIs f or liv e alerts and loc ation-based ser vices
+Impr oved civilian sa fety thr ough ins tant response tr acking and alert manag emen tLive Civilians Emer gency R esponse S ystem
+Tech Stack: React, Django, Gemini (Vertex AI), Coursera API, YouTube API, JSearch API,
+DuckDuckGo
+Built an AI-driven career guidance platform for personalized learning roadmaps
+Developed skill discovery and career tracking features for user progress monitoring
+Integrated multiple APIs and Gemini for intelligent career analysis and recommendationsLumina – AI Car eer Assis tant

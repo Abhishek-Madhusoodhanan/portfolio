@@ -134,6 +134,44 @@ const Projects = () => {
                 'Cross-browser compatibility',
                 'Modern UI/UX practices'
             ]
+        },
+        {
+            id: 8,
+            title: 'OpsPilot',
+            subtitle: 'Internal Workflow & Approval Management System',
+            description: 'Built an internal workflow platform for leave, reimbursement, and IT support requests. Implemented real-time notifications and status tracking using SignalR and developed RESTful APIs.',
+            image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
+            technologies: ['C#', 'ASP.NET Core', 'React', 'PostgreSQL', 'Entity Framework Core', 'SignalR'],
+            category: 'fullstack',
+            featured: true,
+            confidential: true,
+            github: '#',
+            highlights: [
+                'Leave, reimbursement, and IT support requests pipeline',
+                'Real-time notifications and status tracking via SignalR',
+                'RESTful APIs with PostgreSQL and Entity Framework Core',
+                'Corporate role-based workflow control',
+                'Interactive dashboard for application management'
+            ]
+        },
+        {
+            id: 9,
+            title: 'Lumina',
+            subtitle: 'AI Career Assistant',
+            description: 'Built an AI-driven career guidance platform for personalized learning roadmaps. Integrated multiple APIs (Coursera, YouTube, etc.) and Gemini for intelligent career analysis and recommendations.',
+            image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+            technologies: ['React', 'Django', 'Gemini (Vertex AI)', 'Coursera API', 'YouTube API', 'JSearch API', 'DuckDuckGo'],
+            category: 'ai',
+            featured: true,
+            confidential: true,
+            github: '#',
+            highlights: [
+                'AI-driven career guidance and personalized roadmapping',
+                'Skill discovery and career tracking features for user progress monitoring',
+                'Integration with multiple knowledge APIs',
+                'Intelligent career analysis via Vertex AI (Gemini)',
+                'Automated generation of targeted learning resources'
+            ]
         }
     ];
 
