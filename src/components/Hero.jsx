@@ -155,7 +155,7 @@ const Hero = () => {
                 } else {
                     setTimeout(() => {
                         setGlitch(true);
-                        setTimeout(() => setGlitch(false), 400);
+                        setTimeout(() => setGlitch(false), 200);
                         setIsDeleting(true);
                     }, 1800);
                 }
